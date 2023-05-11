@@ -21,9 +21,10 @@ public class securityConfig  {
 		.csrf()
 		.disable()
 		.authorizeHttpRequests((request)-> request.requestMatchers("/").authenticated()
-				.anyRequest().permitAll()).oauth2Login();
+		.anyRequest().permitAll()).oauth2Login();
 		return http.build();
 	} 
+	
 	
 	
 	protected void configure(HttpSecurity http) throws Exception {
