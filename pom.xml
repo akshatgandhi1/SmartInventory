@@ -127,6 +127,8 @@
 				<groupId>com.microsoft.azure</groupId>
 				<artifactId>azure-webapp-maven-plugin</artifactId>
 				<configuration>
+					<deploymentType>jar</deploymentType>
+					<stack>JAVA</stack>
 					<subscriptionId>ae2974e9-b459-4096-b87b-870554adf13a</subscriptionId>
 					<resourceGroup>Services</resourceGroup>
 					<appName>optistock</appName>
