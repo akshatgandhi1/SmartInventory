@@ -121,21 +121,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>com.microsoft.azure</groupId>
-				<artifactId>azure-webapp-maven-plugin</artifactId>
 				<configuration>
-					<deploymentType>jar</deploymentType>
-					<stack>JAVA</stack>
 					<subscriptionId>ae2974e9-b459-4096-b87b-870554adf13a</subscriptionId>
-					<resourceGroup>Services</resourceGroup>
-					<appName>optistock</appName>
-					<pricingTier>F1</pricingTier>
+					<resourceGroup>Servicesfordeployement</resourceGroup>
+					<appName>SmartOptistock</appName>
+					<pricingTier>B1</pricingTier>
 					<region>East US </region>
 					<runtime>
-						<os>Windows</os>
+						<os>Linux</os>
 						<webContainer>Tomcat 10.0</webContainer>
 						<javaVersion>Java 17</javaVersion>
 					</runtime>
@@ -145,7 +138,7 @@
 								<type>jar</type>
 								<directory>${project.basedir}/target</directory>
 								<includes>
-									<include>*.jar</include>
+									<include>*.war</include>
 								</includes>
 							</resource>
 						</resources>
