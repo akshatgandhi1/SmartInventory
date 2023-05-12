@@ -123,13 +123,13 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<subscriptionId>ae2974e9-b459-4096-b87b-870554adf13a</subscriptionId>
-					<resourceGroup>Servicesfordeployement</resourceGroup>
-					<appName>SmartOptistock</appName>
-					<pricingTier>B1</pricingTier>
+					<resourceGroup>smart</resourceGroup>
+					<appName>SmartOptiStock</appName>
+					<pricingTier>F1</pricingTier>
 					<region>East US </region>
 					<runtime>
-						<os>Linux</os>
-						<webContainer>Tomcat 10.0</webContainer>
+						<os>Windows</os>
+						<webContainer>Java SE</webContainer>
 						<javaVersion>Java 17</javaVersion>
 					</runtime>
 					<deployment>
