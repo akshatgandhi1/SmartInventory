@@ -127,7 +127,6 @@
 				<artifactId>azure-webapp-maven-plugin</artifactId>
 				<version>2.9.0</version>
 				<configuration>
-					<server.port>80</server.port>
 					<subscriptionId>ae2974e9-b459-4096-b87b-870554adf13a</subscriptionId>
 					<resourceGroup>smart</resourceGroup>
 					<appName>SmartOptiStock</appName>
@@ -149,6 +148,12 @@
 							</resource>
 						</resources>
 					</deployment>
+					 <appSettings>
+						<property>
+						  <name>SERVER_PORT</name>
+						  <value>80</value>
+						</property>
+					</appSettings>
 				</configuration>
 
 			</plugin>
