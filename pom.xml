@@ -121,6 +121,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>	
+			<plugin>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<version>2.9.0</version>
 				<configuration>
 					<subscriptionId>ae2974e9-b459-4096-b87b-870554adf13a</subscriptionId>
 					<resourceGroup>smart</resourceGroup>
