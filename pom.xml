@@ -16,6 +16,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
+		<server.port>80</server.port>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -121,21 +122,26 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<version>2.9.0</version>
 				<configuration>
 					<subscriptionId>ae2974e9-b459-4096-b87b-870554adf13a</subscriptionId>
-					<resourceGroup>smart</resourceGroup>
-					<appName>SmartOptiStock</appName>
-					<pricingTier>F1</pricingTier>
+					<resourceGroup>smartinventory</resourceGroup>
+					<appName>OptiStock</appName>
+					<pricingTier>B1</pricingTier>
 					<region>East US </region>
 					<runtime>
-						<os>Windows</os>
-						<webContainer>Java SE</webContainer>
+						<os>Linux</os>
+						<webContainer>Tomcat 10.0</webContainer>
 						<javaVersion>Java 17</javaVersion>
 					</runtime>
 					<deployment>
 						<resources>
 							<resource>
-								<type>jar</type>
+								<type>war</type>
 								<directory>${project.basedir}/target</directory>
 								<includes>
 									<include>*.war</include>
@@ -143,6 +149,7 @@
 							</resource>
 						</resources>
 					</deployment>
+
 				</configuration>
 
 			</plugin>
