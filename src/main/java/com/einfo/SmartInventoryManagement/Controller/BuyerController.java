@@ -58,7 +58,7 @@ public class BuyerController {
 
 	@GetMapping("ViewProductData")
 
-	public ModelAndView getLimitedRecordsWithOffset(@RequestParam(defaultValue = "0") Integer offset,
+	public String getLimitedRecordsWithOffset(@RequestParam(defaultValue = "0") Integer offset,
 			@RequestParam(defaultValue = "3") Integer limit, HttpServletRequest req, Integer currPage,
 			@RequestParam(value = "sortBy", defaultValue = "productname") String sortBy,
 			@RequestParam(value = "sortBydesc", defaultValue = "productdecs") String sortBydesc,
@@ -77,12 +77,12 @@ public class BuyerController {
 		}
 		//System.out.println(buyerRepo.findAll(PageRequest.of(offset, limit)).getContent());
 		// Call the repository method with the PageRequest object
-		ModelAndView mv = new ModelAndView("buyer/viewProduct");
+		//ModelAndView mv = new ModelAndView("buyer/viewProduct");
 		req.setAttribute("totalData", buyerRepo.findAll(pageRequest).getContent().size());
 		req.setAttribute("buyerspage", buyerRepo.findAll(pageRequest).getContent());
 		req.setAttribute("limit", limit);
 		req.setAttribute("currPage", offset);
-		return mv;
+		return "buyer/viewProduct";
 	}
 
 	@GetMapping("ViewSellerDetail")
